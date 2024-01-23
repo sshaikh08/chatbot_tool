@@ -1,11 +1,11 @@
-import tkinter as tk
+from tkinter import Tk
 
-WINDOW_WIDTH = '550'
+WINDOW_WIDTH = '1000'
 WINDOW_HEIGHT = '750'
 WINDOW_SIZE = f'{WINDOW_WIDTH}x{WINDOW_HEIGHT}'
 WINDOW_COLOR = 'grey'
 
-window = tk.Tk()
+window = Tk()
 window.title('Chat bot tool')
 window.configure(bg=WINDOW_COLOR)
 
@@ -20,3 +20,6 @@ x = int((screen_width / 2) - (int(WINDOW_WIDTH) / 2))
 y = int((screen_height / 2) - (int(WINDOW_HEIGHT) / 2))
 
 window.geometry(f"{WINDOW_SIZE}+{x}+{y}")
+
+if __name__ == '__main__':
+    window.mainloop()
