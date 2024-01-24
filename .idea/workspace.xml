@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="Initial Commit 4">
-      <change afterPath="$PROJECT_DIR$/windows/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/windows/all_windows_settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/windows/user_input_elements/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/windows/user_input_elements/user_solution_input.py" afterDir="false" />
+    <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="Added: &#10;-__init__.py to main directory&#10;-created windows folder which contains the settings for all windows that are created for the duration of this program&#10;-main_window.py to the windows folder&#10;-python module to windows folder containing the base setting for most windows of this program&#10;-text box for user provide solution&#10;-folder for modules containing user input elements&#10;-created a main configuration called &quot;chat_bot_tool&quot;&#10;      &#10;Deleted: &#10;-&quot;main&quot; run configuration.&#10;-main_window folder, having this and a main_window.py in the same directory was causing an error.">
+      <change afterPath="$PROJECT_DIR$/windows/main_window/input_elements/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows/main_window/input_elements/generate_optimized_solution_button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows/user_solution.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_window/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_window/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/all_windows_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/all_windows_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/user_input_elements/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/user_input_elements/user_solution_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window/input_elements/solution_text_input.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +47,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.all_windows_settings.executor": "Run",
     "Python.chat_bot_tool.executor": "Run",
     "Python.main.executor": "Run",
     "Python.main_window.executor": "Run",
+    "Python.scrap.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/sshai/PycharmProjects/chatbot_hw_solution_reviewer",
+    "last_opened_file_path": "C:/Users/sshai/PycharmProjects/chatbot_hw_solution_reviewer/windows/main_window",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
@@ -62,6 +65,7 @@
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\windows\main_window" />
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\" />
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\windows" />
     </key>
@@ -139,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705550266789</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added: &#10;-__init__.py to main directory&#10;-created windows folder which contains the settings for all windows that are created for the duration of this program&#10;-main_window.py to the windows folder&#10;-python module to windows folder containing the base setting for most windows of this program&#10;-text box for user provide solution&#10;-folder for modules containing user input elements&#10;-created a main configuration called &quot;chat_bot_tool&quot;&#10;      &#10;Deleted: &#10;-&quot;main&quot; run configuration.&#10;-main_window folder, having this and a main_window.py in the same directory was causing an error.">
+      <option name="closed" value="true" />
+      <created>1705978400394</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705978400394</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -147,6 +159,7 @@
     <MESSAGE value="Initial Commit 2" />
     <MESSAGE value="Initial Commit 3" />
     <MESSAGE value="Initial Commit 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit 4" />
+    <MESSAGE value="Added: &#10;-__init__.py to main directory&#10;-created windows folder which contains the settings for all windows that are created for the duration of this program&#10;-main_window.py to the windows folder&#10;-python module to windows folder containing the base setting for most windows of this program&#10;-text box for user provide solution&#10;-folder for modules containing user input elements&#10;-created a main configuration called &quot;chat_bot_tool&quot;&#10;      &#10;Deleted: &#10;-&quot;main&quot; run configuration.&#10;-main_window folder, having this and a main_window.py in the same directory was causing an error." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: &#10;-__init__.py to main directory&#10;-created windows folder which contains the settings for all windows that are created for the duration of this program&#10;-main_window.py to the windows folder&#10;-python module to windows folder containing the base setting for most windows of this program&#10;-text box for user provide solution&#10;-folder for modules containing user input elements&#10;-created a main configuration called &quot;chat_bot_tool&quot;&#10;      &#10;Deleted: &#10;-&quot;main&quot; run configuration.&#10;-main_window folder, having this and a main_window.py in the same directory was causing an error." />
   </component>
 </project>
