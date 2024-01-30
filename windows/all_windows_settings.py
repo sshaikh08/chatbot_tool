@@ -3,11 +3,12 @@ from tkinter import Tk
 WINDOW_WIDTH = '1000'
 WINDOW_HEIGHT = '750'
 WINDOW_SIZE = f'{WINDOW_WIDTH}x{WINDOW_HEIGHT}'
-WINDOW_COLOR = 'grey'
+
+# WINDOW_COLOR = 'grey'
 
 window = Tk()
 window.title('Chat bot tool')
-window.configure(bg=WINDOW_COLOR)
+# window.configure(bg=WINDOW_COLOR)
 
 window.resizable(False, False)
 

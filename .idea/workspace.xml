@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="Added: &#10;-__init__.py to main directory&#10;-created windows folder which contains the settings for all windows that are created for the duration of this program&#10;-main_window.py to the windows folder&#10;-python module to windows folder containing the base setting for most windows of this program&#10;-text box for user provide solution&#10;-folder for modules containing user input elements&#10;-created a main configuration called &quot;chat_bot_tool&quot;&#10;      &#10;Deleted: &#10;-&quot;main&quot; run configuration.&#10;-main_window folder, having this and a main_window.py in the same directory was causing an error.">
-      <change afterPath="$PROJECT_DIR$/windows/main_window/input_elements/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/windows/main_window/input_elements/generate_optimized_solution_button.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/windows/user_solution.txt" afterDir="false" />
+    <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="Added:&#10;&#10;&#10;Deleted:">
+      <change afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/generate_optimized_solution_button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows/main_window_pkg/main_window.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/windows/all_windows_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/all_windows_settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window/main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/user_input_elements/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/user_input_elements/user_solution_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window/input_elements/solution_text_input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window/input_elements/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window/input_elements/generate_optimized_solution_button.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window/input_elements/solution_text_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/solution_text_input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window/main_window.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/user_solution.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_solution.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +31,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,19 +51,21 @@
     "Python.all_windows_settings.executor": "Run",
     "Python.chat_bot_tool.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.main_window (1).executor": "Run",
     "Python.main_window.executor": "Run",
     "Python.scrap.executor": "Run",
+    "Python.scrap_1.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/sshai/PycharmProjects/chatbot_hw_solution_reviewer/windows/main_window",
+    "last_opened_file_path": "C:/Users/sshai/PycharmProjects/chatbot_hw_solution_reviewer",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\windows" />
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer" />
+      <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\windows" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\windows\main_window" />
@@ -70,7 +73,7 @@
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\windows" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main_window">
     <configuration name="chat_bot_tool" type="PythonConfigurationType" factoryName="Python">
       <module name="chatbot_hw_solution_reviewer" />
       <option name="ENV_FILES" value="" />
@@ -94,11 +97,66 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main_window" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="chatbot_hw_solution_reviewer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/windows/main_window_pkg" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/windows/main_window_pkg/main_window.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scrap_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="chatbot_hw_solution_reviewer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrap_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.chat_bot_tool" />
+      <item itemvalue="Python.main_window" />
+      <item itemvalue="Python.scrap_1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main_window" />
+        <item itemvalue="Python.scrap_1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
@@ -151,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705978400394</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added:&#10;-Back main_window directory&#10;-placed a main_window_user_inputs directory in main_window&#10;-Moved main_window.py to main_window directory&#10;-user_solution.txt: this is where the solution the user provides will be temporarily stored&#10;-Button to retrieve and store user text from text box. Functionality has not yet been implemented">
+      <option name="closed" value="true" />
+      <created>1706124268837</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706124268837</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -160,6 +226,7 @@
     <MESSAGE value="Initial Commit 3" />
     <MESSAGE value="Initial Commit 4" />
     <MESSAGE value="Added: &#10;-__init__.py to main directory&#10;-created windows folder which contains the settings for all windows that are created for the duration of this program&#10;-main_window.py to the windows folder&#10;-python module to windows folder containing the base setting for most windows of this program&#10;-text box for user provide solution&#10;-folder for modules containing user input elements&#10;-created a main configuration called &quot;chat_bot_tool&quot;&#10;      &#10;Deleted: &#10;-&quot;main&quot; run configuration.&#10;-main_window folder, having this and a main_window.py in the same directory was causing an error." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added: &#10;-__init__.py to main directory&#10;-created windows folder which contains the settings for all windows that are created for the duration of this program&#10;-main_window.py to the windows folder&#10;-python module to windows folder containing the base setting for most windows of this program&#10;-text box for user provide solution&#10;-folder for modules containing user input elements&#10;-created a main configuration called &quot;chat_bot_tool&quot;&#10;      &#10;Deleted: &#10;-&quot;main&quot; run configuration.&#10;-main_window folder, having this and a main_window.py in the same directory was causing an error." />
+    <MESSAGE value="Added:&#10;-Back main_window directory&#10;-placed a main_window_user_inputs directory in main_window&#10;-Moved main_window.py to main_window directory&#10;-user_solution.txt: this is where the solution the user provides will be temporarily stored&#10;-Button to retrieve and store user text from text box. Functionality has not yet been implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added:&#10;-Back main_window directory&#10;-placed a main_window_user_inputs directory in main_window&#10;-Moved main_window.py to main_window directory&#10;-user_solution.txt: this is where the solution the user provides will be temporarily stored&#10;-Button to retrieve and store user text from text box. Functionality has not yet been implemented" />
   </component>
 </project>
