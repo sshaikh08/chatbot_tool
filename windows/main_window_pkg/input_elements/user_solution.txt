@@ -1,0 +1,2 @@
+GET_SOLUTION_TEXT = "Generate Solution"
+BORDER_WIDTH = '5'
