@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="Final push before removal of all commented out code">
-      <change afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/user_solution.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/windows/main_window_pkg/main_window_old.py" afterDir="false" />
+    <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="I got the the test button &quot;get_button_2&quot; to write to 'user_solution.txt' when running from button.py. &#10;&#10;This commit is before removing and replacing all the test code in main_window.py.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_solution.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_solution.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/generate_optimized_solution_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/solution_text_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/text_input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/text_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/text_input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/user_solution.txt" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/user_solution.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/user_solution.txt" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/user_solution.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706629279610</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="I got the the test button &quot;get_button_2&quot; to write to 'user_solution.txt' when running from button.py. &#10;&#10;This commit is before removing and replacing all the test code in main_window.py.">
+      <option name="closed" value="true" />
+      <created>1706753863582</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706753863582</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -241,6 +247,7 @@
     <MESSAGE value="Added: &#10;-__init__.py to main directory&#10;-created windows folder which contains the settings for all windows that are created for the duration of this program&#10;-main_window.py to the windows folder&#10;-python module to windows folder containing the base setting for most windows of this program&#10;-text box for user provide solution&#10;-folder for modules containing user input elements&#10;-created a main configuration called &quot;chat_bot_tool&quot;&#10;      &#10;Deleted: &#10;-&quot;main&quot; run configuration.&#10;-main_window folder, having this and a main_window.py in the same directory was causing an error." />
     <MESSAGE value="Added:&#10;-Back main_window directory&#10;-placed a main_window_user_inputs directory in main_window&#10;-Moved main_window.py to main_window directory&#10;-user_solution.txt: this is where the solution the user provides will be temporarily stored&#10;-Button to retrieve and store user text from text box. Functionality has not yet been implemented" />
     <MESSAGE value="Final push before removal of all commented out code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final push before removal of all commented out code" />
+    <MESSAGE value="I got the the test button &quot;get_button_2&quot; to write to 'user_solution.txt' when running from button.py. &#10;&#10;This commit is before removing and replacing all the test code in main_window.py." />
+    <option name="LAST_COMMIT_MESSAGE" value="I got the the test button &quot;get_button_2&quot; to write to 'user_solution.txt' when running from button.py. &#10;&#10;This commit is before removing and replacing all the test code in main_window.py." />
   </component>
 </project>

@@ -1,2 +1,1 @@
-GET_SOLUTION_TEXT = "Generate Solution"
-BORDER_WIDTH = '5'
+print(f'{text_box.get(1.0, "end-1c")}')

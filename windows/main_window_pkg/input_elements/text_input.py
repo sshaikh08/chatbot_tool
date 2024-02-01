@@ -8,8 +8,6 @@ def create_solution_txt(window_name):
 
 
 def get_solution(text_box, file_name):
+    print(f'{text_box.get(1.0, "end-1c")}')
     with open(file_name, 'w+') as user_solution:
         user_solution.write(text_box.get(1.0, "end-1c"))
-
-        for line in user_solution:
-            print(line)
