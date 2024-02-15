@@ -5,11 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="Figure out how to write to temp file instead of directly to target file">
-      <change afterPath="$PROJECT_DIR$/chatgpt_scrap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gemini_scrap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrap_work/button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrap_work/chatgpt_scrap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrap_work/gemini_scrap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrap_work/scrap.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrap_work/scrap_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrap_work/scrap_1_temp_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrap_work/scrap_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text_files/user_solution.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap_1_temp_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrap_1_temp_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_solution.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_solution.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatgpt_scrap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gemini_scrap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrap_1_temp_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_solution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/text_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/text_input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/user_solution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/user_solution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/user_solution.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +74,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sshai/PycharmProjects/chatbot_hw_solution_reviewer&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sshai/PycharmProjects/chatbot_hw_solution_reviewer/scrap_work&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\scrap_work" />
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer" />
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\windows\main_window_pkg\input_elements" />
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\windows\main_window_pkg" />
@@ -76,7 +92,7 @@
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\windows" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.scrap_1_temp_file">
+  <component name="RunManager">
     <configuration name="chat_bot_tool" type="PythonConfigurationType" factoryName="Python">
       <module name="chatbot_hw_solution_reviewer" />
       <option name="ENV_FILES" value="" />
@@ -144,7 +160,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.scrap_1_temp_file" />
       <item itemvalue="Python.chat_bot_tool" />
       <item itemvalue="Python.main_window_old" />
       <item itemvalue="Python.scrap_1" />
@@ -254,6 +269,17 @@
     </task>
     <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />

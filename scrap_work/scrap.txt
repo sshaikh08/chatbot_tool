@@ -1,0 +1,21 @@
+from windows.main_window import main_window
+
+
+def run_chat_bot(window):
+    current_window = Toplevel(window)
+    current_window.mainloop()
+
+
+if __name__ == '__main__':
+    run_chat_bot(main_window)
+
+
+from windows.main_window import main_window
+
+
+def run_chat_bot():
+    main_window.mainloop()
+
+
+if __name__ == '__main__':
+    run_chat_bot()
