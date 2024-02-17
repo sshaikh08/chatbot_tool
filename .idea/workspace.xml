@@ -4,27 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="Figure out how to write to temp file instead of directly to target file">
-      <change afterPath="$PROJECT_DIR$/scrap_work/button.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap_work/chatgpt_scrap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap_work/gemini_scrap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap_work/scrap.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap_work/scrap_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap_work/scrap_1_temp_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap_work/scrap_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text_files/user_solution.txt" afterDir="false" />
+    <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="-Moved, get solution text from text_input.py to button.py&#10;&#10;-Implemented version of write statement that uses a tempfile before writing to the target file (user_solution.txt). This implementation is done in button.py&#10;&#10;-Created a separate &quot;scrap_work&quot; folder where all scrap work will go moving forward as well as any older version of file for the main program will go if I believe they are worth saving for future reference">
+      <change afterPath="$PROJECT_DIR$/scrap_work/gemini_api_scrap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatgpt_scrap.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gemini_scrap.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap_1_temp_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_solution.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/text_input.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/text_input.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/input_elements/user_solution.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/windows/main_window_pkg/main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/main_window_pkg/user_solution.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/user_solution.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,26 +41,27 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.all_windows_settings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.button.executor&quot;: &quot;Run&quot;,
-    &quot;Python.chat_bot_tool.executor&quot;: &quot;Run&quot;,
-    &quot;Python.generate_optimized_solution_button.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_window (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_window.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scrap.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scrap_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scrap_1_temp_file.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sshai/PycharmProjects/chatbot_hw_solution_reviewer/scrap_work&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.all_windows_settings.executor": "Run",
+    "Python.button.executor": "Run",
+    "Python.chat_bot_tool.executor": "Run",
+    "Python.gemini_api_scrap.executor": "Run",
+    "Python.generate_optimized_solution_button.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main_window (1).executor": "Run",
+    "Python.main_window.executor": "Run",
+    "Python.scrap.executor": "Run",
+    "Python.scrap_1.executor": "Run",
+    "Python.scrap_1_temp_file.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/sshai/PycharmProjects/chatbot_hw_solution_reviewer/scrap_work",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\scrap_work" />
@@ -267,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706978952379</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="-Moved, get solution text from text_input.py to button.py&#10;&#10;-Implemented version of write statement that uses a tempfile before writing to the target file (user_solution.txt). This implementation is done in button.py&#10;&#10;-Created a separate &quot;scrap_work&quot; folder where all scrap work will go moving forward as well as any older version of file for the main program will go if I believe they are worth saving for future reference">
+      <option name="closed" value="true" />
+      <created>1708011968600</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708011968600</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,6 +284,7 @@
     <MESSAGE value="I got the the test button &quot;get_button_2&quot; to write to 'user_solution.txt' when running from button.py. &#10;&#10;This commit is before removing and replacing all the test code in main_window.py." />
     <MESSAGE value="Got main.py to write to &quot;user_solution.txt&quot;. This commit is before clean up of all files in project" />
     <MESSAGE value="Figure out how to write to temp file instead of directly to target file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Figure out how to write to temp file instead of directly to target file" />
+    <MESSAGE value="-Moved, get solution text from text_input.py to button.py&#10;&#10;-Implemented version of write statement that uses a tempfile before writing to the target file (user_solution.txt). This implementation is done in button.py&#10;&#10;-Created a separate &quot;scrap_work&quot; folder where all scrap work will go moving forward as well as any older version of file for the main program will go if I believe they are worth saving for future reference" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Moved, get solution text from text_input.py to button.py&#10;&#10;-Implemented version of write statement that uses a tempfile before writing to the target file (user_solution.txt). This implementation is done in button.py&#10;&#10;-Created a separate &quot;scrap_work&quot; folder where all scrap work will go moving forward as well as any older version of file for the main program will go if I believe they are worth saving for future reference" />
   </component>
 </project>
