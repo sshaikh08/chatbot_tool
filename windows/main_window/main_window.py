@@ -1,11 +1,11 @@
 from windows.all_windows_settings import window
-from windows.main_window_pkg.input_elements.text_input import create_solution_txt_box
-from windows.main_window_pkg.input_elements.button import create_get_solution_button, get_solution
+from windows.main_window.input_elements.text_input import create_solution_txt_box
+from windows.main_window.input_elements.button import create_get_solution_button, get_solution
 
 from os import chdir
 from pathlib import Path
 
-FILE_NAME = Path('text_files/user_solution.txt')
+FILE_NAME = Path('text_files/user_texts/user_solution.txt')
 
 main_window = window
 

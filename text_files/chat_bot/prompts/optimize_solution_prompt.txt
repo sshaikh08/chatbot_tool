@@ -1,0 +1,1 @@
+Optimize the following code for the stated homework problem which is commented out. If the problem is not stated before the solution in comments, prompt the user "resubmit the solution with the homework problem clearly stated as comments". Return the solution with comments on new or altered lines. In comments, provide a summary of the changes:\n\n

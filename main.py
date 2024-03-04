@@ -1,6 +1,7 @@
-# from main_window_pkg import main_window_pkg as m_w
-from windows.main_window_pkg import main_window as m_w
+from windows.main_window import main_window as m_w
 
+
+# from sys import exit  # Code Review: The scenarios this should be used
 
 def main() -> None:
     m_w.main_window.mainloop()
@@ -8,8 +9,3 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
-
-
-
-
-    # run_chat_bot(main_window_pkg)
