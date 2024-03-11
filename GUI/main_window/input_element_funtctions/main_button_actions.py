@@ -1,6 +1,5 @@
 from tkinter import Text
 from pathlib import Path
-
 from tempfile import NamedTemporaryFile
 from shutil import move
 
