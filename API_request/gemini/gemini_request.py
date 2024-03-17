@@ -12,7 +12,7 @@ CHATBOT_PROMPT_PATH = Path.joinpath(TEXT_FILES_PATH, 'chat_bot/prompts/optimize_
 OPTIMIZED_SOLUTION_PATH = Path.joinpath(TEXT_FILES_PATH, 'chat_bot/gemini/responses/optimized_solution.txt')
 
 
-def receive_write_response():
+def receive_write_response() -> Path:
     def gemini_send_prompt(*text_strings: str) -> str:
         GOOGLE_API_KEY = getenv('GOOGLE_API_KEY')
         genai.configure(api_key=GOOGLE_API_KEY)
@@ -40,7 +40,11 @@ def receive_write_response():
 if __name__ == '__main__':
     # pass
 
-    receive_write_response()
+    test_object = receive_write_response()
+
+    print(test_object)
+
+    print(type(test_object))
 
     # from pathlib import Path
     #

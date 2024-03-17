@@ -3,8 +3,7 @@ from pathlib import Path
 from tkinter import Button, Text
 
 from GUI.all_windows_settings import window
-from GUI.main_window.input_element_funtctions.main_text_actions import create_solution_txt_box
-from GUI.main_window.input_element_funtctions.main_button_actions import get_solution
+from GUI.main_window.input_element_funtctions.main_button_actions import generate_solution_action
 
 FILE_NAME = Path('text_files/user_texts/user_solution.txt')
 
@@ -23,7 +22,7 @@ BORDER_WIDTH = '5'
 main_win_button = Button(main_window,
                          borderwidth='5',
                          text=GET_SOLUTION_TEXT,
-                         command=lambda: get_solution(main_win_sol_txt, FILE_NAME))
+                         command=lambda: generate_solution_action(FILE_NAME, main_win_sol_txt))
 
 main_win_button.pack()
 
