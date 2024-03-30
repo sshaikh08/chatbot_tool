@@ -19,7 +19,7 @@ y = int((screen_height / 2) - (int(WINDOW_HEIGHT) / 2))
 
 window.geometry(f"{WINDOW_SIZE}+{x}+{y}")
 
-window.update()
+# window.update()
 
 window.resizable(False, False)
 

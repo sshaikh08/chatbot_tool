@@ -1,15 +1,11 @@
+from config import CHATBOT_PROMPT_PATH, USER_SOLUTION_PATH, OPTIMIZED_SOLUTION_PATH
 from my_python_tools.read_write_operations import write_to_temp_first, read_txt_to_str
+from config import CHATBOT_PROMPT_PATH, USER_SOLUTION_PATH
 
 import google.generativeai as genai
 
 from pathlib import Path
 from os import getenv, getcwd
-
-
-TEXT_FILES_PATH = Path('../../text_files')
-USER_SOLUTION_PATH = Path.joinpath(TEXT_FILES_PATH, 'user_texts/user_solution.txt')
-CHATBOT_PROMPT_PATH = Path.joinpath(TEXT_FILES_PATH, 'chat_bot/prompts/optimize_solution_prompt.txt')
-OPTIMIZED_SOLUTION_PATH = Path.joinpath(TEXT_FILES_PATH, 'chat_bot/gemini/responses/optimized_solution.txt')
 
 
 def receive_write_response() -> Path:
@@ -23,6 +19,8 @@ def receive_write_response() -> Path:
         # the ("\n".join(text_strings)
 
         return response.text
+
+    print(CHATBOT_PROMPT_PATH)  # TESTING
 
     prompt_string, user_solution_string = read_txt_to_str(CHATBOT_PROMPT_PATH), read_txt_to_str(
         USER_SOLUTION_PATH)  # Code Review: Can this be consolidated?
@@ -40,11 +38,16 @@ def receive_write_response() -> Path:
 if __name__ == '__main__':
     # pass
 
-    test_object = receive_write_response()
+    print(CHATBOT_PROMPT_PATH)
 
-    print(test_object)
+    response_path = receive_write_response()
+    print(response_path)
 
-    print(type(test_object))
+    # test_object = receive_write_response()
+    #
+    # print(test_object)
+    #
+    # print(type(test_object))
 
     # from pathlib import Path
     #

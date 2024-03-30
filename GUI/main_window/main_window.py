@@ -1,4 +1,3 @@
-from os import chdir
 from pathlib import Path
 from tkinter import Button, Text
 
@@ -25,7 +24,9 @@ main_win_button = Button(main_window,
                          command=lambda: generate_solution_action(FILE_NAME, main_win_sol_txt))
 
 main_win_button.pack()
-
+window.update()
 if __name__ == '__main__':
+    from os import chdir
+
     chdir('../..')
     main_window.mainloop()
