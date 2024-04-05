@@ -25,6 +25,9 @@ main_win_button = Button(main_window,
 
 main_win_button.pack()
 window.update()
+
+# TESTING: Checking Path
+
 if __name__ == '__main__':
     from os import chdir
 

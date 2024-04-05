@@ -1,20 +1,14 @@
-from config import OPTIMIZE_SOL_PROMPT_PATH, USER_SOLUTION_PATH, OPTIMIZED_SOLUTION_PATH
+# This first debug version of this module is just to get it to work since this module contains the problem
+# code
 from my_python_tools.read_write_operations import write_to_temp_first, read_txt_to_str
-from config import OPTIMIZE_SOL_PROMPT_PATH, USER_SOLUTION_PATH
-
 import google.generativeai as genai
 
 from pathlib import Path
 from os import getenv, getcwd
 
-#print(f"gemini_request, CHATBOT_PROMPT_PATH:{CHATBOT_PROMPT_PATH}")
-#print(f"gemini_request, Current working directory:{Path.cwd()}")
-print(f"gemini_request, receive_write_response(), CHATBOT_PROMPT_PATH:{OPTIMIZE_SOL_PROMPT_PATH}")  # TESTING
-print(f"gemini_request, receive_write_response(), USER_SOLUTION_PATH:{USER_SOLUTION_PATH}")  # TESTING
-OPTIMIZE_SOL_PROMPT_PATH = Path('text_files/chat_bot/prompts/optimize_solution_prompt.txt')
-USER_SOLUTION_PATH = Path('../../text_files/user_texts')
-print(f"gemini_request, receive_write_response(), CHATBOT_PROMPT_PATH:{OPTIMIZE_SOL_PROMPT_PATH}")  # TESTING
-print(f"gemini_request, receive_write_response(), USER_SOLUTION_PATH:{USER_SOLUTION_PATH}")  # TESTING
+OPTIMIZE_SOL_PROMPT_PATH = Path('../../text_files/chat_bot/prompts/optimize_solution_prompt.txt')
+USER_SOLUTION_PATH = Path('../../text_files/user_texts/user_solution.txt')
+OPTIMIZED_SOL_PATH = Path('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
 
 
 def receive_write_response() -> Path:
@@ -26,12 +20,10 @@ def receive_write_response() -> Path:
 
         model = 'gemini-pro'
         client = genai.GenerativeModel(model)
-        response = client.generate_content("\n".join(text_strings))  # Code review: specifically
+        response = client.generate_content("\n\n".join(text_strings))  # Code review: specifically
         # the ("\n".join(text_strings)
 
         return response.text
-
-
 
     prompt_string, user_solution_string = read_txt_to_str(OPTIMIZE_SOL_PROMPT_PATH), read_txt_to_str(
         USER_SOLUTION_PATH)  # Code Review: Can this be consolidated?
@@ -41,9 +33,9 @@ def receive_write_response() -> Path:
     response_string = gemini_send_prompt(prompt_string, user_solution_string)
     # cwd = getcwd()
 
-    write_to_temp_first(response_string, OPTIMIZED_SOLUTION_PATH)
+    write_to_temp_first(response_string, OPTIMIZED_SOL_PATH)
 
-    return OPTIMIZED_SOLUTION_PATH
+    return OPTIMIZED_SOL_PATH
 
 
 if __name__ == '__main__':
@@ -51,13 +43,13 @@ if __name__ == '__main__':
 
     #print(CHATBOT_PROMPT_PATH)
 
-    response_path = receive_write_response()
-    #print(response_path)
+    # response_path = receive_write_response()
+    # print(response_path)
 
-    # test_object = receive_write_response()
-    #
-    # print(test_object)
-    #
+    test_object = receive_write_response()
+
+    print(test_object)
+
     # print(type(test_object))
 
     # from pathlib import Path
