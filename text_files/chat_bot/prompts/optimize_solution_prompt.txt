@@ -1,9 +1,5 @@
-Why is the below prompt in quotes only giving some version of
-"I am unable to provide an optimized solution without the homework problem clearly stated in comments. Please resubmit the solution with the homework problem clearly stated as comments."
-The question and the corresponding solution should appear. Also show what your reading in terms of the user solution because the question should be clearly stated
-
-Optimize the following code for the stated homework problem which is commented out. If the problem is not stated before
-the solution in comments, prompt the user "resubmit the solution with the homework problem clearly stated as comments.
+Optimize the following python code for the stated homework problem. If the problem is not stated before
+the solution in python comments, prompt the user "resubmit the solution with the homework problem clearly stated as python comments.
 Return the solution with comments on new or altered lines. In comments, provide a summary of the changes:
 
 

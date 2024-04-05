@@ -1,11 +1,3 @@
-# TESTING OPEN: Checking Path
-import os
-from my_python_tools.testing_tools import print_path
-
-print(f"main.py, cwd: {os.getcwd()}")
-print_path()
-# TESTING CLOSE: COMMENT OUT OR DELETE WHEN DONE
-
 from GUI.main_window import main_window as m_w
 
 

@@ -1,45 +1,30 @@
 from config import OPTIMIZE_SOL_PROMPT_PATH, USER_SOLUTION_PATH, OPTIMIZED_SOLUTION_PATH
 from my_python_tools.read_write_operations import write_to_temp_first, read_txt_to_str
-from config import OPTIMIZE_SOL_PROMPT_PATH, USER_SOLUTION_PATH
 
 import google.generativeai as genai
 
 from pathlib import Path
-from os import getenv, getcwd
-
-#print(f"gemini_request, CHATBOT_PROMPT_PATH:{CHATBOT_PROMPT_PATH}")
-#print(f"gemini_request, Current working directory:{Path.cwd()}")
-print(f"gemini_request, receive_write_response(), CHATBOT_PROMPT_PATH:{OPTIMIZE_SOL_PROMPT_PATH}")  # TESTING
-print(f"gemini_request, receive_write_response(), USER_SOLUTION_PATH:{USER_SOLUTION_PATH}")  # TESTING
-OPTIMIZE_SOL_PROMPT_PATH = Path('text_files/chat_bot/prompts/optimize_solution_prompt.txt')
-USER_SOLUTION_PATH = Path('../../text_files/user_texts')
-print(f"gemini_request, receive_write_response(), CHATBOT_PROMPT_PATH:{OPTIMIZE_SOL_PROMPT_PATH}")  # TESTING
-print(f"gemini_request, receive_write_response(), USER_SOLUTION_PATH:{USER_SOLUTION_PATH}")  # TESTING
+from os import getenv
 
 
 def receive_write_response() -> Path:
     def gemini_send_prompt(*text_strings: str) -> str:
-        print(f"gemini_request, receive_write_response(), CHATBOT_PROMPT_PATH:{OPTIMIZE_SOL_PROMPT_PATH}")  # TESTING
-
         GOOGLE_API_KEY = getenv('GOOGLE_API_KEY')
         genai.configure(api_key=GOOGLE_API_KEY)
 
         model = 'gemini-pro'
         client = genai.GenerativeModel(model)
-        response = client.generate_content("\n".join(text_strings))  # Code review: specifically
-        # the ("\n".join(text_strings)
+        response = client.generate_content(
+            "\n".join(text_strings))  # Code review: specifically the ("\n".join(text_strings)
 
         return response.text
-
-
 
     prompt_string, user_solution_string = read_txt_to_str(OPTIMIZE_SOL_PROMPT_PATH), read_txt_to_str(
         USER_SOLUTION_PATH)  # Code Review: Can this be consolidated?
     # Would creating a class object be worth
-    # considering for this scenario
+    # considering for this scenario (Yes for additional buttons)
 
     response_string = gemini_send_prompt(prompt_string, user_solution_string)
-    # cwd = getcwd()
 
     write_to_temp_first(response_string, OPTIMIZED_SOLUTION_PATH)
 
@@ -47,6 +32,8 @@ def receive_write_response() -> Path:
 
 
 if __name__ == '__main__':
+    # Code Review: Is there a more professional or useful way to organize code in this part of a module?
+    # Is this type of file even called a module or is it referred to as something else "professionally"?
     # pass
 
     #print(CHATBOT_PROMPT_PATH)

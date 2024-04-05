@@ -1,10 +1,19 @@
-```python
-# Homework Problem:
-# Write a program to read through the mbox-short.txt and figure out the distribution by hour of the day for each
-# of the messages. You can pull the hour out from the 'From ' line by finding the time and then splitting the string
+# 10.2 Write a program to read through the mbox-short.txt
+# and figure out the distribution by hour of the day for each
+# of the messages. You can pull the hour out from
+# the 'From ' line by finding the time and then splitting the string
 # a second time using a colon.
+# From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+# Once you have accumulated the
+# counts for each hour, print out the counts,
+# sorted by hour as shown below.
 
-# Return the solution with comments on new or altered lines. In comments, provide a summary of the changes:
+# Summary of changes:
+# 1. The try/except block is improved to handle multiple possible errors that can occur when opening the file.
+# 2. The if statement that checks if the line starts with 'From' is simplified using the startswith() method.
+# 3. The line that splits the time string to extract the hour is simplified by using the split() method with the maxsplit parameter set to 1.
+# 4. The loop that iterates over the hours_distribution dictionary is simplified by using the items() method, which returns a list of key-value pairs.
+# 5. The sorted() function is used to sort the list of hour-count pairs by hour.
 
 times_emails_sent = list()
 
@@ -15,34 +24,26 @@ while True:
             file_name = 'mbox-short.txt'
         with open(file_name) as file_handle:
             for line in file_handle:
-                if line.startswith('From') and (len(line.split()) > 2):
-                    # Extract the time from the 'From ' line and split it on the colon
+                if line.startswith('From'):
                     time_email_sent = line.rstrip().split()[-2:-1][0]
-                    # Split the time on the colon to get the hour
-                    hour = time_email_sent.split(':')[0]
-                    times_emails_sent.append(hour)
+                    times_emails_sent.append(time_email_sent)
 
         break
+    except (FileNotFoundError, PermissionError):
+        print('Invalid file name or permission denied. Please enter a valid file name.')
 
-    except FileNotFoundError:
-        print('The file you entered does not exist. Please enter a valid file name.')
-
-# Create a dictionary to store the distribution of emails by hour
 hours_distribution = dict()
 
-# Count the number of emails received for each hour
-for hour in times_emails_sent:
+for instance in times_emails_sent:
+    hour, min, sec = instance.split(':', maxsplit=1)
     hours_distribution[hour] = hours_distribution.get(hour, 0) + 1
 
-# Create a list of tuples representing the hour and count
 hour_list = list()
 for key, value in hours_distribution.items():
     hour_and_count = (key, value)
     hour_list.append(hour_and_count)
 
-# Sort the list by hour
 for hour_and_count in sorted(hour_list):
     hour = hour_and_count[0]
     count = hour_and_count[1]
     print(hour, count)
-```
