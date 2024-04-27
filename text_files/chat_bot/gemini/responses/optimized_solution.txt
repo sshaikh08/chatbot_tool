@@ -9,14 +9,10 @@
 # counts for each hour, print out the counts,
 # sorted by hour as shown below.
 
-# Optimized the try-except block to catch potential file-related exceptions
-# and provide a helpful error message
-
-# Simplified the loop that accumulates the counts for each hour by using the get() method
-# of the dictionary to handle the case where the hour is not yet in the dictionary
-
-# Optimized the loop that prints the sorted list of hours and counts by using the built-in sorted()
-# function to sort the list and the join() method of the str class to format the output
+# Summarize the changes:
+# * Use a dictionary comprehension to construct hours_distribution
+# * Use a list comprehension to construct hour_list
+# * Use a dictionary comprehension to get hour and count from hour_list
 
 times_emails_sent = list()
 
@@ -33,23 +29,14 @@ while True:
 
         break
 
-    except (FileNotFoundError, OSError):
-        print('The file you entered does not exist or is inaccessible. Please enter a valid file name.')
+    except FileNotFoundError:
+        print('The file you entered does not exist. Please enter a valid file name.')
 
-hours_distribution = dict()
+hours_distribution = {hour: hours_distribution.get(hour, 0) + 1 for instance in times_emails_sent
+               for hour, _, _ in (instance.split(':'),)}
 
-for instance in times_emails_sent:
-    hour_min_sec = instance.split(':')
-    hour = hour_min_sec[0]
-    hours_distribution[hour] = hours_distribution.get(hour, 0) + 1
+hour_list = [(hour, count) for hour, count in hours_distribution.items()]
 
-hour_list = list()
-for key, value in hours_distribution.items():
-    hour_and_count = (key, value)
-    hour_list.append(hour_and_count)
-
-for hour_and_count in sorted(hour_list):
-    hour = hour_and_count[0]
-    count = hour_and_count[1]
-    print(f'{hour:2} {count:3}')
+for hour, count in sorted(hour_list):
+    print(hour, count)
 ```
