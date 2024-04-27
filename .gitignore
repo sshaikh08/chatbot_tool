@@ -1,0 +1,17 @@
+.idea/misc.xml
+__pycache__/config.cpython-311.pyc
+API_request/__pycache__/__init__.cpython-311.pyc
+API_request/gemini/__pycache__/__init__.cpython-311.pyc
+API_request/gemini/__pycache__/gemini_request.cpython-311.pyc
+GUI/__pycache__/__init__.cpython-311.pyc
+GUI/__pycache__/all_windows_settings.cpython-311.pyc
+GUI/main_window/__pycache__/__init__.cpython-311.pyc
+GUI/main_window/__pycache__/main_window.cpython-311.pyc
+GUI/main_window/input_element_funtctions/__pycache__/__init__.cpython-311.pyc
+GUI/main_window/input_element_funtctions/__pycache__/main_button_actions.cpython-311.pyc
+my_python_tools/__pycache__/__init__.cpython-311.pyc
+my_python_tools/__pycache__/my_subprosseses.cpython-311.pyc
+my_python_tools/__pycache__/read_write_operations.cpython-311.pyc
+my_python_tools/__pycache__/testing_tools.cpython-311.pyc
+my_python_tools/application_instance_controller/__pycache__/constants.cpython-311.pyc
+.idea/workspace.xml
