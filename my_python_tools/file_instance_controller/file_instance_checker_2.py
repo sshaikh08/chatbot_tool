@@ -1,8 +1,9 @@
+# Code Review: This a copy, go to line 54
 import os.path
 import sys
 
 from psutil import process_iter, Process  # Code Review this
-from pathlib import Path, PureWindowsPath
+from pathlib import Path
 from logging import basicConfig, \
     getLogger  # Ask ChatGPT/Gemini the most common ways/best practices to logging messages and using the logging module.
 
@@ -50,12 +51,13 @@ def list_files_open(
 
 
 # Code Review: I feel like a decorator could be used in this instance
-def is_file_open_in_app(dict_of_open_files: dict, file_path: Path) -> bool:  # Code Review: In my testing below, to get
-    # the result that I want, I end up having to convert the path as a str object into a Path object for this to work.
-    # This seems redundant to me. What are different ways I can approach this to get the result that I want that is less
-    # redundant.
+def is_file_open_in_app(dict_of_open_files: dict, file_path: str) -> bool:  # Code Review: This copy of this module.
+    # I've changed the parameter annotation to expect a str instead of a Path. I personally don't like this be the str
+    # that is expected is a path. It seems stronger to me to expect a Path object instead like in the original copy of
+    # file_instance_checker.py, but that instance, there is an extra step of converting the str to path first which
+    # feels like an extra, unnecessary step. What are your thoughts. What other approached besides these two can I take?
     for key in dict_of_open_files.keys():
-        if Path(key) is file_path:
+        if key is file_path:
             return True
     return False
 
@@ -109,12 +111,12 @@ if __name__ == '__main__':
     # methodology/resources for approaching unit tests regardless of the type of module I'm writing
 
     # -----------------------------------------------------------------------
-    import pathlib, os
+    import pathlib
 
     files_open_in_notepad = list_files_open()
     optimized_solution_path = Path('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
     optimized_solution_path_1 = Path('../../text_files/chat_bot/gemini/responses/optimized_solution.txt').absolute()
-    optimized_solution_path_2 = PureWindowsPath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
+    optimized_solution_path_2 = pathlib.PureWindowsPath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
     optimized_solution_path_3 = optimized_solution_path_2.parent
     optimized_solution_path_4 = os.path.abspath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
 

@@ -8,6 +8,7 @@
 # counts for each hour, print out the counts,
 # sorted by hour as shown below.
 
+
 times_emails_sent = list()
 
 while True:
