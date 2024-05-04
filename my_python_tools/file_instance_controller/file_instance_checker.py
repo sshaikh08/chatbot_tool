@@ -1,4 +1,3 @@
-import os.path
 import sys
 
 from psutil import process_iter, Process  # Code Review this
@@ -112,11 +111,11 @@ if __name__ == '__main__':
     import pathlib, os
 
     files_open_in_notepad = list_files_open()
-    optimized_solution_path = Path('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
-    optimized_solution_path_1 = Path('../../text_files/chat_bot/gemini/responses/optimized_solution.txt').absolute()
-    optimized_solution_path_2 = PureWindowsPath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
-    optimized_solution_path_3 = optimized_solution_path_2.parent
-    optimized_solution_path_4 = os.path.abspath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
+    # optimized_solution_path = Path('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
+    # optimized_solution_path_1 = Path('../../text_files/chat_bot/gemini/responses/optimized_solution.txt').absolute()
+    # optimized_solution_path_2 = PureWindowsPath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
+    # optimized_solution_path_3 = optimized_solution_path_2.parent
+    optimized_solution_path_4 = Path(os.path.abspath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt'))
 
     # print(files_open_in_notepad)
     # print(optimized_solution_path)
@@ -127,7 +126,7 @@ if __name__ == '__main__':
     # print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path))
     # print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path_4))
 
-    print(is_file_open_in_app(files_open_in_notepad, Path(optimized_solution_path_4))) # Code Review: This test case is
+    print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path_4)) # Code Review: This test case is
     # the result that I was looking for. I can't get the full path without this conversion by just using
     # pathlib.Path().absolute
 
