@@ -2,19 +2,21 @@ import sys
 
 from psutil import process_iter, Process  # Code Review this
 from pathlib import Path, PureWindowsPath
-from logging import basicConfig, \
-    getLogger  # Ask ChatGPT/Gemini the most common ways/best practices to logging messages and using the logging module.
+from logging import basicConfig, getLogger  # Ask ChatGPT/Gemini the most common ways/best practices to logging
+# messages and using the logging module.
 
 from constants import app_cmdline_indexes as aci
 
 logger = getLogger(
-    Path(__file__).name)  #Code Review: This was defined in list_files_open, is it appropriate to define it here instead
+    Path(__file__).name)  # Code Review: This was defined in list_files_open, is it appropriate to define it here
+# instead
 
 
-# Code Review: Potentially could use/be a decorator somewhere (don't really think this is the case anymore but ask anyway).
+# Code Review: Potentially could use/be a decorator somewhere (don't really think this is the case anymore but ask
+# anyway).
 def list_files_open(
         application_name: str = 'notepad.exe') -> dict:  # Rewrite this at some point to support macos and linux
-    VALUE_MISSING_FROM_DICT_ERR_MSG = (
+    value_missing_from_dict_err_msg = (
         f"Key \"{application_name}\" does not exist in app_cmdline_indexes dictionary. Update app_cmdline_indexes\n"
         f"dictionary in constants.py with an appropriate application .exe name and the corresponding psutil cmdline\n"
         f"list index containing the target file path.")
@@ -29,7 +31,7 @@ def list_files_open(
         cmdline_index = aci[application_name]
     except KeyError as e:
         basicConfig(level='DEBUG')  # RESEARCH FURTHER
-        logger.error(VALUE_MISSING_FROM_DICT_ERR_MSG)
+        logger.error(value_missing_from_dict_err_msg)
         sys.exit()
 
     for process_item in process_iter():
@@ -115,7 +117,8 @@ if __name__ == '__main__':
     # optimized_solution_path_1 = Path('../../text_files/chat_bot/gemini/responses/optimized_solution.txt').absolute()
     # optimized_solution_path_2 = PureWindowsPath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
     # optimized_solution_path_3 = optimized_solution_path_2.parent
-    optimized_solution_path_4 = Path(os.path.abspath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt'))
+    optimized_solution_path_4 = Path(
+        os.path.abspath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt'))
 
     # print(files_open_in_notepad)
     # print(optimized_solution_path)
@@ -126,7 +129,7 @@ if __name__ == '__main__':
     # print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path))
     # print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path_4))
 
-    print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path_4)) # Code Review: This test case is
+    print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path_4))  # Code Review: This test case is
     # the result that I was looking for. I can't get the full path without this conversion by just using
     # pathlib.Path().absolute
 
