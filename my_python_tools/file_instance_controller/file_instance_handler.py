@@ -1,4 +1,4 @@
 
 
-def close_note_pad_instance() -> None:
+def close_notepad_instance() -> None:
     pass
