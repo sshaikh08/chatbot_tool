@@ -1,44 +1,43 @@
-# 10.2 Write a program to read through the mbox-short.txt
-# and figure out the distribution by hour of the day for each
-# of the messages. You can pull the hour out from
-# the 'From ' line by finding the time and then splitting the string
-# a second time using a colon.
-# From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
-# Once you have accumulated the
-# counts for each hour, print out the counts,
-# sorted by hour as shown below.
-
-times_emails_sent = list()
+#9.4 Write a program to read through the mbox-short.txt and figure out
+# who has sent the greatest number of mail messages.
+# The program looks for 'From ' lines and takes the second word of those lines as the person who sent the mail.
+# The program creates a Python dictionary that maps the sender's mail address to a count of the number of times they
+# appear in the file. After the dictionary is produced, the program reads through the dictionary using a maximum loop
+# to find the most prolific committer.
 
 while True:
     try:
-        file_name = input('Please enter a text file: ')
-        if len(file_name) < 1:
-            file_name = 'mbox-short.txt'
-        with open(file_name) as file_handle:
-            for line in file_handle:
-                if line.startswith('From') and (len(line.split()) > 2):
-                    time_email_sent = line.rstrip().split()[-2:-1][0]
-                    times_emails_sent.append(time_email_sent)
+        name = input("Enter file:")
+        if len(name) < 1:
+            # name = "mbox-short.txt"
+            name = 'py4e_assignments/8-lists/mbox-short.txt'
 
+        email_address_list = list()
+
+        with open(name) as handle:
+            for line in handle:
+                if not line.startswith('From:'):
+                    continue
+                line.rstrip()
+                email_address = line.split()[1]
+                email_address_list.append(email_address.rstrip())
         break
-
     except FileNotFoundError:
-        print('The file you entered does not exist. Please enter a valid file name.')
+        print('File not found. Please enter a valid file path.')
 
-hours_distribution = dict()
+# print(email_address_list)
 
-for instance in times_emails_sent:
-    hour_min_sec = instance.split(':')
-    hour = hour_min_sec[0]
-    hours_distribution[hour] = hours_distribution.get(hour, 0) + 1
+email_addresses = dict()
 
-hour_list = list()
-for key, value in hours_distribution.items():
-    hour_and_count = (key, value)
-    hour_list.append(hour_and_count)
+for email_address in email_address_list:
+    email_addresses[email_address] = email_addresses.get(email_address, 0) + 1
 
-for hour_and_count in sorted(hour_list):
-    hour = hour_and_count[0]
-    count = hour_and_count[1]
-    print(hour, count)
+# print(email_addresses)
+most_emails_sent = -1
+email_that_sent_most = None
+for email_address, number_of_emails_sent in email_addresses.items():
+    if number_of_emails_sent > most_emails_sent:
+        most_emails_sent = number_of_emails_sent
+        email_that_sent_most = email_address
+
+print(email_that_sent_most, most_emails_sent)

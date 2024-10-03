@@ -1,70 +1,42 @@
-Sure! Here's an optimized solution to the problem as described in its description:
-
 ```python
-# 10.2 Write a program to read through the mbox-short.txt
-# and figure out the distribution by hour of the day for each
-# of the messages. You can pull the hour out from
-# the 'From ' line by finding the time and then splitting the string
-# a second time using a colon.
-# From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
-# Once you have accumulated the
-# counts for each hour, print out the counts,
-# sorted by hour as shown below.
+# 9.4 Write a program to read through the mbox-short.txt and figure out
+# who has sent the greatest number of mail messages.
+# The program looks for 'From ' lines and takes the second word of those lines as the person who sent the mail.
+# The program creates a Python dictionary that maps the sender's mail address to a count of the number of times they
+# appear in the file. After the dictionary is produced, the program reads through the dictionary using a maximum loop
+# to find the most prolific committer.
 
-# Summary of changes:
-# - Use a dictionary to store the counts for each hour, instead of a list.
-# - Use the `get()` method to increment the count for each hour, instead of using an if-statement.
-# - Use the `sorted()` function to sort the dictionary by hour, instead of creating a separate list of tuples.
+# Improved error handling: Use a try/except block to handle potential invalid file paths.
+# Use a more descriptive error message to guide the user.
 
-times_emails_sent = list()
+# Optimized file handling: Use a context manager (with) to open and close the file, ensuring proper resource management.
+# Removed unnecessary rstrip() call from line processing.
 
-# Try-except block to handle file not found error
+# Refactored loop to combine the line count and email address extraction steps.
+# Used email_addresses.get() to handle non-existent keys gracefully, avoiding the need for an initial default value.
+
+# Simplified the search for the most prolific sender by using max() on a generator expression.
+# Removed redundant printing of intermediate data.
+
 while True:
     try:
-        # Prompt the user for a text file
-        file_name = input('Please enter a text file: ')
+        name = input("Enter file:")
+        if len(name) < 1:
+            name = 'py4e_assignments/8-lists/mbox-short.txt'
 
-        # If the user enters an empty string, use the default file name
-        if len(file_name) < 1:
-            file_name = 'mbox-short.txt'
-
-        # Open the file and read the lines
-        with open(file_name) as file_handle:
-            for line in file_handle:
-
-                # Check if the line starts with 'From' and has more than 2 words
-                if line.startswith('From') and (len(line.split()) > 2):
-
-                    # Extract the time email sent from the line
-                    time_email_sent = line.rstrip().split()[-2:-1][0]
-
-                    # Append the time email sent to the list
-                    times_emails_sent.append(time_email_sent)
-
-        # Break out of the loop if the file was found
+        with open(name) as handle:
+            email_addresses = dict()
+            for line in handle:
+                if line.startswith('From:'):
+                    email_address = line.split()[1]
+                    email_addresses[email_address] = email_addresses.get(email_address, 0) + 1
+    except FileNotFoundError:
+        print('Invalid file path. Please enter a valid path.')
+    else:
         break
 
-    except FileNotFoundError:
-        # Print an error message if the file was not found
-        print('The file you entered does not exist. Please enter a valid file name.')
+most_emails_sent = max(email_addresses.values())
+email_that_sent_most = max(email_addresses, key=lambda email: email_addresses[email])
 
-# Create a dictionary to store the counts for each hour
-hours_distribution = dict()
-
-# Iterate through the list of times emails sent
-for instance in times_emails_sent:
-
-    # Extract the hour from the time email sent
-    hour_min_sec = instance.split(':')
-    hour = hour_min_sec[0]
-
-    # Increment the count for the hour in the dictionary
-    hours_distribution[hour] = hours_distribution.get(hour, 0) + 1
-
-# Sort the dictionary by hour
-hour_list = sorted(hours_distribution.items())
-
-# Print the counts for each hour
-for hour, count in hour_list:
-    print(hour, count)
+print(f"{email_that_sent_most} sent the most emails: {most_emails_sent}")
 ```
