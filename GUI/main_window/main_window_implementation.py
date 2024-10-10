@@ -1,12 +1,10 @@
 from pathlib import Path
 from tkinter import Button, Text
 
-from GUI.all_windows_settings import window
+from GUI.main_window.main_windows_settings import main_window
 from GUI.main_window.input_element_funtctions.main_button_actions import generate_solution_action
 
 FILE_NAME = Path('text_files/user_texts/user_solution.txt')
-
-main_window = window
 
 # main_win_sol_txt = create_solution_txt_box(main_window)
 main_win_sol_txt = Text(main_window, height=10, width=75)
@@ -24,7 +22,7 @@ main_win_button = Button(main_window,
                          command=lambda: generate_solution_action(FILE_NAME, main_win_sol_txt))
 
 main_win_button.pack()
-window.update()
+main_window.update()
 
 # TESTING: Checking Path
 

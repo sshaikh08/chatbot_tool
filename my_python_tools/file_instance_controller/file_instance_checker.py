@@ -106,7 +106,7 @@ if __name__ == '__main__':
     # -----------------------------------------------------------------------
 
     # print(list_files_open('notepad.exe'))
-    # print(list_files_open('Code.exe'))  # Code Review: How do I write a unit test for this. Also, provide a
+    # print(list_files_open('Code.exe'))  # Code Review: How do I write a unit tests for this. Also, provide a
     # methodology/resources for approaching unit tests regardless of the type of module I'm writing
 
     # -----------------------------------------------------------------------
@@ -129,7 +129,7 @@ if __name__ == '__main__':
     # print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path))
     # print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path_4))
 
-    print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path_4))  # Code Review: This test case is
+    print(is_file_open_in_app(files_open_in_notepad, optimized_solution_path_4))  # Code Review: This tests case is
     # the result that I was looking for. I can't get the full path without this conversion by just using
     # pathlib.Path().absolute
 
