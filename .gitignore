@@ -2,8 +2,8 @@
 *.pyc
 __pycache__/config.cpython-311.pyc
 API_request/__pycache__/__init__.cpython-311.pyc
-API_request/gemini/__pycache__/__init__.cpython-311.pyc
-API_request/gemini/__pycache__/gemini_request.cpython-311.pyc
+API_request/google_gemini/__pycache__/__init__.cpython-311.pyc
+API_request/google_gemini/__pycache__/gemini_request.cpython-311.pyc
 GUI/__pycache__/__init__.cpython-311.pyc
 GUI/__pycache__/all_windows_settings.cpython-311.pyc
 GUI/main_window/__pycache__/__init__.cpython-311.pyc

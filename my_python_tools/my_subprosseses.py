@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     print(getcwd())
 
-    target_directory = Path('../API_request/gemini')
+    target_directory = Path('../API_request/google_gemini')
 
     # chdir(target_directory)
 

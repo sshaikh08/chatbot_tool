@@ -69,7 +69,7 @@ if __name__ == '__main__':
     #
     # files_open_in_notepad = list_files_open(notepad)
     # optimized_solution_path = Path(
-    #     'C:\\Users\sshai\PycharmProjects\chatbot_tool\\text_files\chat_bot\gemini\\responses\optimized_solution.txt')
+    #     'C:\\Users\sshai\PycharmProjects\chatbot_tool\\text_files\chat_bot\google_gemini\\responses\optimized_solution.txt')
     #
     # print(files_open_in_notepad)
     #
@@ -113,9 +113,9 @@ if __name__ == '__main__':
     import pathlib, os
 
     files_open_in_notepad = list_files_open()
-    # optimized_solution_path = Path('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
-    # optimized_solution_path_1 = Path('../../text_files/chat_bot/gemini/responses/optimized_solution.txt').absolute()
-    # optimized_solution_path_2 = PureWindowsPath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt')
+    # optimized_solution_path = Path('../../text_files/chat_bot/google_gemini/responses/optimized_solution.txt')
+    # optimized_solution_path_1 = Path('../../text_files/chat_bot/google_gemini/responses/optimized_solution.txt').absolute()
+    # optimized_solution_path_2 = PureWindowsPath('../../text_files/chat_bot/google_gemini/responses/optimized_solution.txt')
     # optimized_solution_path_3 = optimized_solution_path_2.parent
     optimized_solution_path_4 = Path(
         os.path.abspath('../../text_files/chat_bot/gemini/responses/optimized_solution.txt'))

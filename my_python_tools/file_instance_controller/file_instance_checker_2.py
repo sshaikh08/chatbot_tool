@@ -70,7 +70,7 @@ if __name__ == '__main__':
     #
     # files_open_in_notepad = list_files_open(notepad)
     # optimized_solution_path = Path(
-    #     'C:\\Users\sshai\PycharmProjects\chatbot_tool\\text_files\chat_bot\gemini\\responses\optimized_solution.txt')
+    #     'C:\\Users\sshai\PycharmProjects\chatbot_tool\\text_files\chat_bot\google_gemini\\responses\optimized_solution.txt')
     #
     # print(files_open_in_notepad)
     #

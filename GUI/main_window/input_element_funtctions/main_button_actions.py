@@ -6,7 +6,7 @@ from shutil import move
 from my_python_tools.read_write_operations import text_box_write_operation
 from my_python_tools.my_subprosseses import open_notepad
 
-from API_request.gemini.gemini_request import receive_write_response
+from API_request.google_gemini.gemini_request import receive_write_response
 
 
 def generate_solution_action(target_file: Path, text_box: Text) -> None:

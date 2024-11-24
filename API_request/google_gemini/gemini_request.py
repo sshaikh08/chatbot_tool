@@ -9,13 +9,13 @@ from os import getenv
 from GUI.wating_window.tests.chat_gpt2_sample import while_waiting_window
 
 
-@while_waiting_window
+#@while_waiting_window
 def receive_write_response() -> Path:
     def gemini_send_prompt(*text_strings: str) -> str:
         GOOGLE_API_KEY = getenv('GOOGLE_API_KEY')
         genai.configure(api_key=GOOGLE_API_KEY)
 
-        model = 'gemini-pro'
+        model = 'google_gemini-pro'
         client = genai.GenerativeModel(model)
         response = client.generate_content(
             "\n".join(text_strings))  # Code review: specifically the ("\n".join(text_strings)
@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
     #print(CHATBOT_PROMPT_PATH)
 
-    response_path = receive_write_response()
+    #response_path = receive_write_response()
     #print(response_path)
 
     # test_object = receive_write_response()
@@ -63,3 +63,16 @@ if __name__ == '__main__':
     #
     # optimized_solution = gemini_send_prompt(prompt, user_solution)
     # print(optimized_solution)
+
+    from tkinter import Tk, Label, Button
+
+    main_window = Tk()
+    Generate_solution = Label(main_window, text=f"Fill this in with something better")
+    popup_button = Button(main_window, text="Generate Solution", width=20, command=receive_write_response)
+    exit_program_button = Button(main_window, text="Exit", width=20, command=main_window.quit)
+
+    Generate_solution.pack(padx=12, pady=12)
+    popup_button.pack(padx=12, pady=12)
+    exit_program_button.pack(padx=12, pady=12)
+
+    main_window.mainloop()
