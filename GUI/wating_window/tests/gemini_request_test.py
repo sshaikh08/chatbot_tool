@@ -12,3 +12,4 @@ if __name__ == '__main__':
     exit_program_button.pack(padx=12, pady=12)
 
     main_window.mainloop()
+

@@ -15,7 +15,7 @@ def receive_write_response() -> Path:
         GOOGLE_API_KEY = getenv('GOOGLE_API_KEY')
         genai.configure(api_key=GOOGLE_API_KEY)
 
-        model = 'google_gemini-pro'
+        model = 'gemini-pro'
         client = genai.GenerativeModel(model)
         response = client.generate_content(
             "\n".join(text_strings))  # Code review: specifically the ("\n".join(text_strings)
