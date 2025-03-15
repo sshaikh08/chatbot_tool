@@ -69,17 +69,17 @@ def while_waiting_window(func):
     return wrapper
 
 
-@while_waiting_window
-def generate_random_num():
-    """
-    Simulates generating a random number by sleeping for a while, then printing the result.
-    """
-    sleep(7)
-    random_int = randint(0, 1000)
-    print(random_int)
-
-
 if __name__ == '__main__':
+    @while_waiting_window
+    def generate_random_num():
+        """
+        Simulates generating a random number by sleeping for a while, then printing the result.
+        """
+        sleep(7)
+        random_int = randint(0, 1000)
+        print(random_int)
+
+
     main_window = Tk()
     python_version_label = Label(main_window, text=f"Python v{python_version()}")
     popup_button = Button(main_window, text="Popup!", width=20, command=generate_random_num)

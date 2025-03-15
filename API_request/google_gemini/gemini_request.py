@@ -11,6 +11,8 @@ from GUI.wating_window.tests.chat_gpt2_sample import while_waiting_window
 
 #@while_waiting_window
 def receive_write_response() -> Path:
+    print(f'Prompt Path: {OPTIMIZE_SOL_PROMPT_PATH}')
+
     def gemini_send_prompt(*text_strings: str) -> str:
         GOOGLE_API_KEY = getenv('GOOGLE_API_KEY')
         genai.configure(api_key=GOOGLE_API_KEY)
