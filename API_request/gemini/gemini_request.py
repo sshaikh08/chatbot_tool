@@ -1,4 +1,4 @@
-from text_files.text_file_paths import OPTIMIZE_SOL_PROMPT_PATH, USER_SOLUTION_PATH, OPTIMIZED_SOLUTION_PATH
+from constants.text_file_paths import OPTIMIZE_SOL_PROMPT_PATH, USER_SOLUTION_PATH, OPTIMIZED_SOLUTION_PATH
 from my_python_tools.read_write_operations import write_to_temp_first, read_txt_to_str
 
 import google.generativeai as genai

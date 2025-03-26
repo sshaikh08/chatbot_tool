@@ -1,6 +1,5 @@
 import sys
 from pathlib import Path
-from text_files.text_file_paths import OPTIMIZE_SOL_PROMPT_PATH
 
 
 def print_path(path_name: Path = Path.cwd(), path_string: str = None) -> None:
