@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="Leaving for GA, messed around with text_file_paths.py so it doesn't change when referenced in another module">
+    <list default="true" id="3c3d6113-1af2-4107-805b-5338c398e68a" name="Changes" comment="I'm also going to push this workspace.xml. Sigh">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/chatbot_tool.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API_request/google_gemini/gemini_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_request/google_gemini/gemini_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_files/text_file_paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_files/text_file_paths.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_files/user_texts/user_solution.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text_files/user_texts/user_solution.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +27,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="waiting_window_implementation" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -45,7 +45,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -58,37 +58,31 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.all_windows_settings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.button.executor&quot;: &quot;Run&quot;,
-    &quot;Python.chat_bot_tool.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gemini_api_scrap.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gemini_api_scrap_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gemini_request.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gemini_request_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.generate_optimized_solution_button.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_window (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_window.executor&quot;: &quot;Run&quot;,
-    &quot;Python.read_txt_scrap.executor&quot;: &quot;Run&quot;,
-    &quot;Python.read_write_operations.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scrap.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scrap_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scrap_1_temp_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.text_file_paths.executor&quot;: &quot;Run&quot;,
-    &quot;Python.waiting_window_decorator_CHATGPT.executor&quot;: &quot;Run&quot;,
-    &quot;Python.waiting_window_decorator_Gemini.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;waiting__window__implementation__NO__DECORATOR&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sshai/programming_projects/PycharmProjects/problem_sets&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.all_windows_settings.executor": "Run",
+    "Python.button.executor": "Run",
+    "Python.chat_bot_tool.executor": "Run",
+    "Python.gemini_api_scrap.executor": "Run",
+    "Python.gemini_api_scrap_2.executor": "Run",
+    "Python.gemini_request.executor": "Run",
+    "Python.generate_optimized_solution_button.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main_window (1).executor": "Run",
+    "Python.main_window.executor": "Run",
+    "Python.read_txt_scrap.executor": "Run",
+    "Python.scrap.executor": "Run",
+    "Python.scrap_1.executor": "Run",
+    "Python.scrap_1_temp_file.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/sshai/programming_projects/PycharmProjects/chatbot_tool",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\api_request" />
@@ -105,7 +99,96 @@
       <recent name="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer\text_files\user_texts" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.gemini_request_test">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="chat_bot_tool" type="PythonConfigurationType" factoryName="Python">
+      <module name="chatbot_hw_solution_reviewer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\sshai\PycharmProjects\chatbot_hw_solution_reviewer" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="chat_gpt2_sample" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="chatbot_tool" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI/wating_window/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/wating_window/tests/chat_gpt2_sample.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cookbook_rewrite_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="chatbot_tool" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI/wating_window/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/wating_window/tests/cookbook_rewrite_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gemini_request" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="chatbot_tool" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/API_request/google_gemini" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API_request/google_gemini/gemini_request.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="gemini_request_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="chatbot_tool" />
       <option name="ENV_FILES" value="" />
@@ -137,8 +220,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
@@ -150,79 +234,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="chatbot_tool" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI/wating_window/tests/test_2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/wating_window/tests/test_2/test_2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="text_file_paths" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="chatbot_tool" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/text_files" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/text_files/text_file_paths.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="waiting_window_decorator_Gemini" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="chatbot_tool" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI/wating_window/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\sshai\programming_projects\PycharmProjects\chatbot_tool\GUI\wating_window\tests\waiting_window_decorator_Gemini.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python.chat_bot_tool" />
+      <item itemvalue="Python.chat_gpt2_sample" />
+      <item itemvalue="Python.cookbook_rewrite_2" />
+      <item itemvalue="Python.gemini_request_test" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.gemini_request" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.gemini_request_test" />
-        <item itemvalue="Python.text_file_paths" />
-        <item itemvalue="Python.waiting_window_decorator_Gemini" />
-        <item itemvalue="Python.test_2" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.gemini_request" />
+        <item itemvalue="Python.gemini_request_test" />
+        <item itemvalue="Python.cookbook_rewrite_2" />
+        <item itemvalue="Python.chat_gpt2_sample" />
       </list>
     </recent_temporary>
   </component>
@@ -346,23 +372,7 @@
       <option name="project" value="LOCAL" />
       <updated>1709252112894</updated>
     </task>
-    <task id="LOCAL-00014" summary="Commit before creating new branch off waiting window implementation to get the waiting window working without using a decorator">
-      <option name="closed" value="true" />
-      <created>1739830032168</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1739830032168</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Leaving for GA, messed around with text_file_paths.py so it doesn't change when referenced in another module">
-      <option name="closed" value="true" />
-      <created>1742051537679</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1742051537679</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -370,19 +380,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/waiting_window_implementation" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -402,9 +400,7 @@
     <MESSAGE value="-Moved, get solution text from text_input.py to button.py&#10;&#10;-Implemented version of write statement that uses a tempfile before writing to the target file (user_solution.txt). This implementation is done in button.py&#10;&#10;-Created a separate &quot;scrap_work&quot; folder where all scrap work will go moving forward as well as any older version of file for the main program will go if I believe they are worth saving for future reference" />
     <MESSAGE value="gemini_api_scrap.py: Was able to subscribe&#10;&#10;Deleted scrap work and moved it into its own project" />
     <MESSAGE value="Started gemini response implementation" />
-    <MESSAGE value="Commit before creating new branch off waiting window implementation to get the waiting window working without using a decorator" />
-    <MESSAGE value="Leaving for GA, messed around with text_file_paths.py so it doesn't change when referenced in another module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Leaving for GA, messed around with text_file_paths.py so it doesn't change when referenced in another module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started gemini response implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
