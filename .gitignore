@@ -17,3 +17,4 @@ my_python_tools/__pycache__/testing_tools.cpython-311.pyc
 my_python_tools/application_instance_controller/__pycache__/constants.cpython-311.pyc
 .idea/workspace.xml
 my_python_tools/file_instance_controller/__pycache__/constants.cpython-311.pyc
+/.venv/
