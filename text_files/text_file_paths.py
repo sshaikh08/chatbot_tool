@@ -1,6 +1,7 @@
 from pathlib import Path
 
-TEXT_FILES_PATH = Path('text_files')#.absolute() # Code Review: Would this be a good idea to use?
+#TEXT_FILES_PATH = Path('text_files').absolute() # Code Review: Would this be a good idea to use?
+TEXT_FILES_PATH = Path('text_files').resolve() # Code Review: Would this be a good idea to use?
 USER_SOLUTION_PATH = Path.joinpath(TEXT_FILES_PATH, 'user_texts/user_solution.txt')
 OPTIMIZE_SOL_PROMPT_PATH = Path.joinpath(TEXT_FILES_PATH, 'chat_bot/prompts/optimize_solution_prompt.txt')
 OPTIMIZED_SOLUTION_PATH = Path.joinpath(TEXT_FILES_PATH, 'chat_bot/gemini/responses/optimized_solution.txt')

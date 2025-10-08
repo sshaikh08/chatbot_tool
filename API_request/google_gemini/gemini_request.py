@@ -64,6 +64,8 @@ if __name__ == '__main__':
     # optimized_solution = gemini_send_prompt(prompt, user_solution)
     # print(optimized_solution)
 
+
+    #-----------------------------------------------------
     from tkinter import Tk, Label, Button
 
     main_window = Tk()
@@ -76,3 +78,7 @@ if __name__ == '__main__':
     exit_program_button.pack(padx=12, pady=12)
 
     main_window.mainloop()
+
+    #---------------------------------------------------------
+    # print(Path.cwd())
+    # print(OPTIMIZED_SOLUTION_PATH)
