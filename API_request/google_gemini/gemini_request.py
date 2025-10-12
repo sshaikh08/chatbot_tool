@@ -17,7 +17,7 @@ def receive_write_response() -> Path:
         GOOGLE_API_KEY = getenv('GOOGLE_API_KEY')
         genai.configure(api_key=GOOGLE_API_KEY)
 
-        model = 'gemini-2.0-flash' # Code Review: This needs a try catch plus addition modification
+        model = 'gemini-pro-latest' # Code Review: This needs a try catch plus addition modification
                                    # Additional modification should at least include putting available models
                                    # in a dictionary in the constants folder/file
         client = genai.GenerativeModel(model)
