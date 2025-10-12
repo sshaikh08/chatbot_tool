@@ -1,4 +1,4 @@
-Sure! Here's an optimized solution to the problem as described in its description:
+Excellent, the homework problem is clearly stated in the comments. Here is the optimized version of your Python code with a summary of the changes and comments on the altered lines.
 
 ```python
 # 10.2 Write a program to read through the mbox-short.txt
@@ -12,59 +12,46 @@ Sure! Here's an optimized solution to the problem as described in its descriptio
 # sorted by hour as shown below.
 
 # Summary of changes:
-# - Use a dictionary to store the counts for each hour, instead of a list.
-# - Use the `get()` method to increment the count for each hour, instead of using an if-statement.
-# - Use the `sorted()` function to sort the dictionary by hour, instead of creating a separate list of tuples.
+# 1.  Combined Loops: The code now processes each line and updates the hour count
+#     in a single pass through the file. This eliminates the need for the
+#     intermediate list `times_emails_sent`, making the program more memory-efficient.
+# 2.  Simplified Logic: Instead of storing full time-stamps and processing them later,
+#     the hour is extracted and counted immediately. The line parsing logic was also
+#     made more direct.
+# 3.  Efficient Sorting and Printing: The final loop to create a list of tuples for
+#     sorting was removed. The optimized code now directly sorts the dictionary's
+#     .items() and prints them in a single, more Pythonic loop.
 
-times_emails_sent = list()
+# Initialize the dictionary to store hour counts directly.
+hours_distribution = dict()
 
-# Try-except block to handle file not found error
 while True:
     try:
-        # Prompt the user for a text file
         file_name = input('Please enter a text file: ')
-
-        # If the user enters an empty string, use the default file name
         if len(file_name) < 1:
             file_name = 'mbox-short.txt'
-
-        # Open the file and read the lines
         with open(file_name) as file_handle:
             for line in file_handle:
-
-                # Check if the line starts with 'From' and has more than 2 words
-                if line.startswith('From') and (len(line.split()) > 2):
-
-                    # Extract the time email sent from the line
-                    time_email_sent = line.rstrip().split()[-2:-1][0]
-
-                    # Append the time email sent to the list
-                    times_emails_sent.append(time_email_sent)
-
-        # Break out of the loop if the file was found
+                # Optimized line check: 'From ' with a space is more specific and reliable.
+                if line.startswith('From '):
+                    # Split the line once and directly access the time and then the hour.
+                    words = line.split()
+                    # The time string '09:14:16' is the 6th word (index 5).
+                    time = words[5]
+                    # Get the hour by splitting the time string on the colon.
+                    hour = time.split(':')[0]
+                    # Populate the dictionary in the same loop, eliminating the intermediate list.
+                    hours_distribution[hour] = hours_distribution.get(hour, 0) + 1
+        # Break the loop once the file is successfully processed.
         break
 
     except FileNotFoundError:
-        # Print an error message if the file was not found
         print('The file you entered does not exist. Please enter a valid file name.')
 
-# Create a dictionary to store the counts for each hour
-hours_distribution = dict()
 
-# Iterate through the list of times emails sent
-for instance in times_emails_sent:
-
-    # Extract the hour from the time email sent
-    hour_min_sec = instance.split(':')
-    hour = hour_min_sec[0]
-
-    # Increment the count for the hour in the dictionary
-    hours_distribution[hour] = hours_distribution.get(hour, 0) + 1
-
-# Sort the dictionary by hour
-hour_list = sorted(hours_distribution.items())
-
-# Print the counts for each hour
-for hour, count in hour_list:
+# Use a single loop to sort and print the results.
+# sorted() on a dictionary's .items() view returns a sorted list of (key, value) tuples.
+for hour, count in sorted(hours_distribution.items()):
+    # Unpack the tuple directly in the for loop and print.
     print(hour, count)
 ```
