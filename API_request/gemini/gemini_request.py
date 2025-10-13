@@ -37,8 +37,11 @@ if __name__ == '__main__':
     # pass
 
     #print(CHATBOT_PROMPT_PATH)
+    print(OPTIMIZED_SOLUTION_PATH)
+    print(USER_SOLUTION_PATH)
+    print(OPTIMIZE_SOL_PROMPT_PATH)
 
-    response_path = receive_write_response()
+    # response_path = receive_write_response()
     #print(response_path)
 
     # test_object = receive_write_response()
