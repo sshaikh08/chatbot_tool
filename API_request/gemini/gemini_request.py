@@ -21,8 +21,8 @@ def receive_write_response() -> Path:
 
     prompt_string, user_solution_string = read_txt_to_str(OPTIMIZE_SOL_PROMPT_PATH), read_txt_to_str(
         USER_SOLUTION_PATH)  # Code Review: Can this be consolidated?
-    # Would creating a class object be worth
-    # considering for this scenario (Yes for additional buttons)
+                             # Would creating a class object be worth
+                             # considering for this scenario (Yes for additional buttons)
 
     response_string = gemini_send_prompt(prompt_string, user_solution_string)
 
