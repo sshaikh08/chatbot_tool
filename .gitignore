@@ -1,4 +1,4 @@
-.idea/misc.xml
+
 *.pyc
 __pycache__/config.cpython-311.pyc
 API_request/__pycache__/__init__.cpython-311.pyc
@@ -15,5 +15,8 @@ my_python_tools/__pycache__/my_subprosseses.cpython-311.pyc
 my_python_tools/__pycache__/read_write_operations.cpython-311.pyc
 my_python_tools/__pycache__/testing_tools.cpython-311.pyc
 my_python_tools/application_instance_controller/__pycache__/constants.cpython-311.pyc
+text_files/chat_bot/gemini/responses/optimized_solution.txt
+text_files/user_texts/user_solution.txt
+.idea/misc.xml
 .idea/workspace.xml
 my_python_tools/file_instance_controller/__pycache__/constants.cpython-311.pyc
