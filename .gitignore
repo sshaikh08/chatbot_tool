@@ -1,5 +1,6 @@
 .idea/misc.xml
 .idea/workspace.xml
+.idea/vcs.xml
 .idea/chatbot_tool.iml
 *.pyc
 __pycache__/config.cpython-311.pyc
