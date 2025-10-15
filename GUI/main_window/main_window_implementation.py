@@ -14,6 +14,9 @@ main_win_sol_txt.pack()  # Create text box
 # def create_solution_txt_box(window_name: Tk) -> Text:
 #     solution_text_box = Text(window_name, height=10, width=75)
 
+
+print(f'main_windows_implementation.py, FILE_NAME: {FILE_NAME} of type {type(FILE_NAME)}')
+
 GET_SOLUTION_TEXT = "Generate Solution"
 BORDER_WIDTH = '5'
 main_win_button = Button(main_window,

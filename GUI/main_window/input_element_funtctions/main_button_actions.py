@@ -10,11 +10,11 @@ from API_request.google_gemini.gemini_request import receive_write_response
 
 
 def generate_solution_action(target_file: Path, text_box: Text) -> None:
-    def get_user_solution():
+    def get_user_solution() -> None:
 
         with NamedTemporaryFile(mode='w', delete=False, encoding="utf-8") as temp_file:
-            text_box_write_operation(temp_file,
-                                     text_box)  # Code Review: referred to bard and it had me running circles,
+            text_box_write_operation(temp_file, text_box)
+            # Code Review: referred to bard, and it had me running circles,
             # can't seem to make pycharm happy with this
 
         move(temp_file.name, target_file)
@@ -23,8 +23,11 @@ def generate_solution_action(target_file: Path, text_box: Text) -> None:
 
     optimized_solution_path = receive_write_response()
 
+    print(f'main_button_action.py, generate_solution_action: {optimized_solution_path} which is type {type(optimized_solution_path)}')
+
     open_notepad(optimized_solution_path)
 
 
 if __name__ == '__main__':
     pass
+

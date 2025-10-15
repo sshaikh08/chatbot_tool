@@ -77,13 +77,13 @@ def popup():
 
 
 if __name__ == '__main__':
-    main_window = Tk()
-    python_version_label = Label(main_window, text=f"Python v{python_version()}")
-    popup_button = Button(main_window, text="Popup!", width=20, command=lambda: popup())
-    exit_program_button = Button(main_window, text="Exit", width=20, command=exit)
+    test_window = Tk()
+    python_version_label = Label(test_window, text=f"Python v{python_version()}")
+    popup_button = Button(test_window, text="Popup!", width=20, command=lambda: popup())
+    exit_program_button = Button(test_window, text="Exit", width=20, command=exit)
 
     python_version_label.pack(padx=12, pady=12)
     popup_button.pack(padx=12, pady=12)
     exit_program_button.pack(padx=12, pady=12)
 
-    main_window.mainloop()
+    test_window.mainloop()

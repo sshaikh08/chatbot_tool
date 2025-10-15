@@ -6,7 +6,7 @@ import google.generativeai as genai
 from pathlib import Path
 from os import getenv
 
-from GUI.wating_window.tests.chat_gpt2_sample import while_waiting_window
+from GUI.wating_window.tests.from_chat_gpt2_sample import while_waiting_window
 
 
 #@while_waiting_window
@@ -15,8 +15,8 @@ def receive_write_response() -> Path:
         GOOGLE_API_KEY = getenv('GOOGLE_API_KEY')
         genai.configure(api_key=GOOGLE_API_KEY)
 
-        model = 'gemini-pro-latest' # This needs a try catch plus addition modification
-                                    # Additional modification should at least include putting available models
+        # model = 'gemini-pro-latest' # This needs a try catch plus addition modification
+        model = 'gemini-2.5-flash'                # Additional modification should at least include putting available models
                                     # in a dictionary in the constants folder/file
         client = genai.GenerativeModel(model)
         response = client.generate_content(
@@ -24,8 +24,11 @@ def receive_write_response() -> Path:
 
         return response.text
 
-    prompt_string, user_solution_string = read_txt_to_str(OPTIMIZE_SOL_PROMPT_PATH), read_txt_to_str(
-        USER_SOLUTION_PATH)  # Code Review: Can this be consolidated?
+    print(f'gemini_request.py, receive_write_response(), OPTIMIZED_SOLUTION_PATH: {OPTIMIZED_SOLUTION_PATH}')
+    print(f'gemini_request.py, receive_write_response(), USER_SOLUTION_PATH: {USER_SOLUTION_PATH}')
+
+    prompt_string, user_solution_string = read_txt_to_str(OPTIMIZE_SOL_PROMPT_PATH), read_txt_to_str(USER_SOLUTION_PATH)
+    # Code Review: Can this be consolidated?
     # Would creating a class object be worth
     # considering for this scenario (Yes for additional buttons)
 
@@ -68,19 +71,25 @@ if __name__ == '__main__':
 
 
     #-----------------------------------------------------
-    from tkinter import Tk, Label, Button
-
-    main_window = Tk()
-    Generate_solution = Label(main_window, text=f"Fill this in with something better")
-    popup_button = Button(main_window, text="Generate Solution", width=20, command=receive_write_response)
-    exit_program_button = Button(main_window, text="Exit", width=20, command=main_window.quit)
-
-    Generate_solution.pack(padx=12, pady=12)
-    popup_button.pack(padx=12, pady=12)
-    exit_program_button.pack(padx=12, pady=12)
-
-    main_window.mainloop()
+    # from tkinter import Tk, Label, Button
+    #
+    # main_window = Tk()
+    # Generate_solution = Label(main_window, text=f"Fill this in with something better")
+    # popup_button = Button(main_window, text="Generate Solution", width=20, command=receive_write_response)
+    # exit_program_button = Button(main_window, text="Exit", width=20, command=main_window.quit)
+    #
+    # Generate_solution.pack(padx=12, pady=12)
+    # popup_button.pack(padx=12, pady=12)
+    # exit_program_button.pack(padx=12, pady=12)
+    #
+    # main_window.mainloop()
 
     #---------------------------------------------------------
-    # print(Path.cwd())
-    # print(OPTIMIZED_SOLUTION_PATH)
+    print(Path.cwd())
+    print(OPTIMIZED_SOLUTION_PATH)
+    print(USER_SOLUTION_PATH)
+    print(OPTIMIZE_SOL_PROMPT_PATH)
+
+    print(OPTIMIZED_SOLUTION_PATH.resolve())
+    print(USER_SOLUTION_PATH.resolve())
+    print(OPTIMIZE_SOL_PROMPT_PATH.resolve())
