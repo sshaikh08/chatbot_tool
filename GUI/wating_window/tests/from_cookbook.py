@@ -75,14 +75,14 @@ def popup():
         #Code Review Not sure how, but it's somehow running the popup window anyway. Ask Why that is.
 
 
-main_window = Tk()
-python_version_label = Label(main_window, text=f"Python v{python_version()}")
-popup_button = Button(main_window, text="Popup!", width=20, command=lambda: popup())
-exit_program_button = Button(main_window, text="Exit", width=20, command=exit)
+sample_window_for_this_module = Tk()
+python_version_label = Label(sample_window_for_this_module, text=f"Python v{python_version()}")
+popup_button = Button(sample_window_for_this_module, text="Popup!", width=20, command=lambda: popup())
+exit_program_button = Button(sample_window_for_this_module, text="Exit", width=20, command=exit)
 
 python_version_label.pack(padx=12, pady=12)
 popup_button.pack(padx=12, pady=12)
 exit_program_button.pack(padx=12, pady=12)
 
 if __name__ == '__main__':
-    main_window.mainloop()
+    sample_window_for_this_module.mainloop()

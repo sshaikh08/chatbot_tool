@@ -32,5 +32,5 @@ main_window.update()
 if __name__ == '__main__':
     from os import chdir
 
-    chdir('../..')
+    chdir('../..') # 10/15/25, I edited text_file_paths.py to account for having to do this
     main_window.mainloop()
